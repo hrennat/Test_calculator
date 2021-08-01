@@ -45,14 +45,14 @@ public class CalculatorTest {
 
     @Test
     void testOutOfRange() {
-        Scanner sc = new Scanner("./src/test/java/resources/test_OutOfRange.txt");
+        Scanner sc = new Scanner("./src/test/resources/test_OutOfRange.txt");
         Assertions.assertThrows(NumberFormatException.class, () -> {
             calculator = new Calculator (Integer.parseInt(sc.next()),Integer.parseInt(sc.next()),Integer.parseInt(sc.next()));
         });
     }
     @Test
     void testInvalidData() {
-        Scanner sc = new Scanner("./src/test/java/resources/test_InvalidData.txt");
+        Scanner sc = new Scanner("./src/test/resources/test_InvalidData.txt");
         Assertions.assertThrows(NumberFormatException.class, () -> {
             calculator = new Calculator (Integer.parseInt(sc.next()),Integer.parseInt(sc.next()),Integer.parseInt(sc.next()));
         });
