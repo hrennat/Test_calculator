@@ -47,14 +47,14 @@ public class CalculatorTest {
     void testOutOfRange() {
         Scanner sc = new Scanner("./src/test/resources/test_OutOfRange.txt");
         Assertions.assertThrows(NumberFormatException.class, () -> {
-            calculator = new Calculator (Integer.parseInt(sc.next()),Integer.parseInt(sc.next()),Integer.parseInt(sc.next()));
+            calculator = new Calculator (Integer.parseInt(sc.next()),4,6);
         });
     }
     @Test
     void testInvalidData() {
         Scanner sc = new Scanner("./src/test/resources/test_InvalidData.txt");
         Assertions.assertThrows(NumberFormatException.class, () -> {
-            calculator = new Calculator (Integer.parseInt(sc.next()),Integer.parseInt(sc.next()),Integer.parseInt(sc.next()));
+            calculator = new Calculator (Integer.parseInt(sc.next()),6,7,9);
         });
     }
 
